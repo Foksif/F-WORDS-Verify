@@ -2,9 +2,9 @@ import disnake
 from disnake.ext import commands
 
 class Settings:
-    Male = 1274673154618556470
-    Female = 1274672743068991530
-    NoneGender = 1275534400796229763
+    Male = 00000000000
+    Female = 00000000000
+    NoneGender = 00000000000
 
 class ButtonView(disnake.ui.View):
     def __init__(self):
@@ -87,7 +87,7 @@ class ButtonsRole(commands.Cog):
     @commands.slash_command()
     async def gender(self, interaction):
         view = ButtonView()
-        embed = disnake.Embed(title="Выбор пола", description="Выбери пол нажатием на кнопки ниже)", color=0xFFB02E)
+        embed = disnake.Embed(title="Выбор пола", description="Выбери пол нажатием на кнопки ниже.", color=0xFFB02E)
 
 
         await interaction.response.send_message(embed=embed, ephemeral=True, view=view)
