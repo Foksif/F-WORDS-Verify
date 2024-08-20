@@ -1,2 +1,2 @@
-# F-WORDS-Verify
+# F-WORLDS-Verify
 Python discord bot
