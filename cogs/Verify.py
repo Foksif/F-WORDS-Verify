@@ -13,13 +13,13 @@ class VerifyModal(disnake.ui.Modal):
 
     async def callback(self, interaction: disnake.ModalInteraction) -> None:
         if self.code == int(interaction.text_values["code"]):
-            role = interaction.guild.get_role(1274672532728844289)
-            noneGender = interaction.guild.get_role(1275534400796229763)
+            role = interaction.guild.get_role(<Role>)
+            noneGender = interaction.guild.get_role(<Role>)
 
             await interaction.author.remove_roles(role)
             await interaction.author.add_roles(noneGender)
 
-            embed = disnake.Embed(title="Верефикация пройдена!", description="Введите команду: **```/gender```** В чат: <#1274661617656922243> что-бы изменить пол.", color=0xFFB02E)
+            embed = disnake.Embed(title="Верефикация пройдена!", description="Введите команду: **```/gender```** В чат: <#> что-бы изменить пол.", color=0xFFB02E)
 
             await interaction.response.send_message(embed=embed, ephemeral=True)
         else:
@@ -44,7 +44,7 @@ class Verify(commands.Cog):
     @commands.command()
     async def verify(self, ctx):
         embed = disnake.Embed(color=0xFFB02E)
-        embed.set_image(url='https://i.imgur.com/2vWxaNL.png')
+        embed.set_image(url='Baner url')
         await ctx.send(embed=embed, view=ButtonView())
 
     @commands.Cog.listener()
@@ -52,7 +52,7 @@ class Verify(commands.Cog):
         if self.persistent_views_added:
             return
 
-        self.bot.add_view(view=ButtonView(), message_id=1275491494651887649)
+        self.bot.add_view(view=ButtonView(), message_id=...)
 
 def setup(bot):
     bot.add_cog(Verify(bot))
