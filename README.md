@@ -1,4 +1,4 @@
-<h1 align="center">F-WORLDS Main discord bot</h1>
+<h1 align="center">F-WORLDS Verify discord bot</h1>
 
 <p align="center">
 <a href="#"><img alt="Foks_f ;)" src="https://img.shields.io/github/last-commit/Foksif/F-WORLDS-Verify/main?color=green&style=for-the-badge"></a>
